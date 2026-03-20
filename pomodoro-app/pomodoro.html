@@ -12,4 +12,23 @@
 
     </div>
 </body>
+
+<script>
+    const btn = document.getElementById("bg-switch");
+
+    const pastelColors = [
+        "#FFB3BA", "#FFDFBA", "#FFFFBA",
+        "#BAFFC9", "#BAE1FF", "#E0BBE4",
+        "#D4F1F4", "#FBE7C6", "#E499B2",
+        "#C7CEEA"
+    ];
+
+    btn.addEventListener("click", () => {
+        const randomColor = pastelColors[
+            Math.floor(Math.random() * pastelColors.length)
+    ];
+
+    document.querySelector(".outerframe").style.background = randomColor;
+    });
+</script>
 </html>

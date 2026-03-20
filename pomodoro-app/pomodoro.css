@@ -4,10 +4,44 @@
     box-sizing: border-box;
 }
 
+body {
+    transition: background 0.5s ease;
+}
+
+#bg-switch{
+    position: fixed;
+    top: 25px;
+    left: 30px;
+    border-radius: 60%;
+    border: none;
+    padding: 25px 30px;
+    cursor: pointer;
+
+     /* soft pastel gradient */
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+
+    /* realistic shadow */
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.2),
+        -6px -6px 12px rgba(255, 255, 255, 0.6);
+
+        transition: all 0.2s ease;
+
+}
+
+#bg-switch:active {
+    box-shadow: 
+        inset 4px 4px 8px rgba(0,0,0,0.2),
+        inset -4px -4px 8px rgba(255,255,255,0.6);
+
+    transform: scale(0.95);
+}
+
 .outerframe{
-    background-color: rgb(210, 131, 157);
+    background-color: rgb(228, 153, 178);
     height: 100vh;
-    background: url("images/study1.jpg") center/cover no-repeat;
+    
+    
     
 
 }
