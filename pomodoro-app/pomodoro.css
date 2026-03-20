@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.outerframe{
+    background-color: rgb(210, 131, 157);
+    height: 100vh;
+    background: url("images/study1.jpg") center/cover no-repeat;
+    
+
+}
