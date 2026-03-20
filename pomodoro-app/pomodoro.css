@@ -40,8 +40,13 @@ body {
 .outerframe{
     background-color: rgb(228, 153, 178);
     height: 100vh;
-    
-    
-    
+}
 
+h2{
+    padding-top: 50px;
+    color: black;
+    text-align: center;
+    height: 60px;
+    font-weight: bolder;
+    font-size: 400%;
 }
