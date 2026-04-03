@@ -6,6 +6,7 @@
 
 body {
     transition: background 0.5s ease;
+
 }
 
 #bg-switch{
@@ -40,13 +41,56 @@ body {
 .outerframe{
     background-color: rgb(228, 153, 178);
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-h2{
-    padding-top: 50px;
-    color: black;
-    text-align: center;
-    height: 60px;
-    font-weight: bolder;
-    font-size: 400%;
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: rgb(255, 253, 253);
+    background-color: rgba(255, 255, 255, 0.30);
+    border-radius: 2em;
+    padding: 4em 3em;
+}
+
+.title{
+    font-size: 3em;
+}
+
+hr{
+    width: 100%;
+    background-color: white;
+    height: 5px;
+    border-radius: 1em;
+    border: none;
+}
+
+.timer{
+    font-size: 10em;
+    font-weight: 700;
+}
+
+.button-wrapper{
+    display: flex;
+    gap: 1em;
+}
+
+button{
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover{
+    transform: translate(-10px);
 }
