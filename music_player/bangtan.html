@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BTS · Bangtan Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Animated BG -->
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="orb orb4"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="bt21-row">
+        <span class="bt21-char">🐰</span>
+        <span class="bt21-char">🐱</span>
+        <span class="bt21-char">🐻</span>
+        <span class="bt21-char">🦆</span>
+        <span class="bt21-char">🐨</span>
+        <span class="bt21-char">🐺</span>
+        <span class="bt21-char">🍪</span>
+        
+      </div>
+      <h1 class="site-title">
+        <span class="title-bang">BANGTAN</span>
+        <span class="title-music">MUSIC PLAYER</span>
+      </h1>
+    </div>
+
+    <div class="header-right">
+      <div class="toggle-wrap">
+        <span class="toggle-label" id="label-group">GROUP</span>
+        <button class="toggle-btn" id="albumToggle" aria-label="Toggle album type">
+          <div class="toggle-knob"></div>
+        </button>
+        <span class="toggle-label" id="label-solo">SOLO</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NOW PLAYING BAR -->
+  <div class="now-playing-bar" id="nowPlayingBar">
+    <div class="np-vinyl" id="npVinyl">
+      <div class="np-vinyl-label">▶</div>
+    </div>
+    <div class="np-info">
+      <p class="np-song" id="npSong">Choose a song</p>
+      <p class="np-artist" id="npArtist">BTS</p>
+    </div>
+    <div class="np-controls">
+      <button class="np-btn" id="prevBtn" title="Previous">⏮</button>
+      <button class="np-btn play-btn" id="playBtn" title="Play/Pause">▶</button>
+      <button class="np-btn" id="nextBtn" title="Next">⏭</button>
+    </div>
+    <div class="np-progress-wrap">
+      <div class="np-progress-bar">
+        <div class="np-progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+    <div class="np-vol">
+      <span>🔊</span>
+      <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="80"/>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="mainContent">
+
+    <!-- GROUP ALBUMS SECTION -->
+    <section class="albums-section" id="groupSection">
+      <div class="section-intro">
+        <h2 class="section-heading">GROUP ALBUMS</h2>
+        <p class="section-sub">The full BTS discography — 방탄소년단</p>
+      </div>
+      <div class="albums-grid" id="groupGrid"></div>
+    </section>
+
+    <!-- SOLO ALBUMS SECTION -->
+    <section class="albums-section hidden" id="soloSection">
+      <div class="section-intro">
+        <h2 class="section-heading">SOLO ALBUMS</h2>
+        <p class="section-sub">Solo projects by each member</p>
+      </div>
+      <div class="albums-grid" id="soloGrid"></div>
+    </section>
+
+  </main>
+
+  <!-- SONG LIST MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-header">
+        <div class="modal-cover-wrap">
+          <div class="modal-cover" id="modalCover"></div>
+        </div>
+        <div class="modal-meta">
+          <p class="modal-type" id="modalType">GROUP</p>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-year" id="modalYear"></p>
+          <p class="modal-artist" id="modalArtistName"></p>
+        </div>
+      </div>
+      <ul class="song-list" id="songList"></ul>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
